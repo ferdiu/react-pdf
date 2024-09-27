@@ -500,7 +500,7 @@ declare namespace ReactPDF {
     /** PDF filename. Alias for anchor tag `download` attribute. */
     fileName?: string;
     document: React.ReactElement<DocumentProps>;
-    children?: React.ReactNode | React.ReactElement<BlobProviderParams>;
+    children?: React.ReactNode | ((props: BlobProviderParams) => React.ReactNode);
     onClick?: React.AnchorHTMLAttributes<HTMLAnchorElement>['onClick'] &
       ((
         event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
